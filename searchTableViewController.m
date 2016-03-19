@@ -67,7 +67,7 @@
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSString *searchString = [self.searchController.searchBar text];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[C] %@", searchString];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains %@", searchString];
     if (self.searchList) {
         [self.searchList removeAllObjects];
     }
